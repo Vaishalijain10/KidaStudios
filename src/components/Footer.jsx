@@ -4,20 +4,23 @@ import image2 from "../assets/Images/dnus.avif";
 
 export default function Footer() {
   return (
-    <div className="flex justify-between items-start px-76 py-4 mt-0">
-      <div>
+    <footer className="w-full bg-white py-6 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center sm:items-start gap-6">
+        
+        {/* Logo */}
         <a href="#">
-          <img src={logo} alt="Logo" className="w-26 h-15" />
+          <img src={logo} alt="Logo" className="w-36 h-auto object-contain" />
         </a>
-      </div>
-    
-      <div className="flex flex-row items-end gap-6">
-        <div className="flex-col ">
-          <img src={image1} alt="StartUpIndia" className="w-22 h-10" />
-          <p className="text-md text-gray-800">DIPP129619</p>
+
+        {/* Badges */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4 sm:gap-6">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <img src={image1} alt="StartUpIndia" className="w-24 h-auto object-contain" />
+            <p className="text-sm text-gray-800 mt-1">DIPP129619</p>
+          </div>
+          <img src={image2} alt="Img2" className="w-16 h-auto object-contain" />
         </div>
-        <img src={image2} alt="Img2" className="w-16 h-14" />
       </div>
-    </div>
+    </footer>
   );
 }

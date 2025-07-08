@@ -7,7 +7,7 @@ import ContactUs from "../components/ContactUs";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth">
+    <div className="scroll-smooth items-center justify-center">
       {/* main section + images */}
       <MainSection />
       {/* apps and games card  */}

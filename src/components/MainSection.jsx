@@ -9,28 +9,38 @@ import { MdMail } from "react-icons/md";
 
 export default function MainSection() {
   return (
-    <section className="flex flex-col justify-center bg-[rgba(22, 22, 23, 0.88)] text-center py-16 px-6 mt-20">
-      <h1 className="text-[80px] font-bold text-black mb-6 leading-[80px]">
-        The best app & game <br /> development studio.
-      </h1>
-      <p className="text-black text-[30px] mx-auto mb-6">
-        Save hours of development time
-      </p>
-      <div className="justify-center items-center flex">
-        <button className="flex items-center gap-3 bg-black text-white font-bold px-6 py-2 rounded-full hover:bg-white hover:text-black hover:border hover:border-dashed hover:shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition ease-in-out">
-          Make an enquiry <MdMail />
-        </button>
-      </div>
+   <section className="flex flex-col items-center justify-center bg-white text-center py-16 sm:py-20 md:py-24 lg:py-32 xl:py-36 mt-16 sm:mt-20 w-full">
+  <div className="w-full max-w-7xl flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+    <h1 className="text-center text-[38px] sm:text-[40px] md:text-[52px] lg:text-[64px] xl:text-[72px] 2xl:text-[80px] font-bold text-black mb-4 sm:mb-6 leading-tight">
+      The best app & game <br className="hidden sm:block" />
+      development studio.
+    </h1>
 
-     
-      <div className="flex flex-row gap-8 mt-26 overflow-hidden ml-[-50px]">
-        <img src={image6} alt="Logo" className="w-auto h-[250px]" />
-        <img src={image1} alt="Logo" className="w-auto h-[240px]" />
-        <img src={image2} alt="Logo" className="w-auto h-[250px]" />
-        <img src={image3} alt="Logo" className="w-auto h-[240px]" />
-        <img src={image4} alt="Logo" className="w-auto h-[250px]" />
-        <img src={image5} alt="Logo" className="w-auto h-[250px]" />
-      </div>
-    </section>
+    <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-black mb-6 sm:mb-8 max-w-3xl">
+      Save hours of development time
+    </p>
+
+    <div className="mb-12 sm:mb-16">
+      <button className="flex items-center gap-2 sm:gap-3 bg-black text-white font-bold text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white hover:text-black hover:border hover:border-dashed hover:shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition ease-in-out">
+        Make an enquiry <MdMail size={20} />
+      </button>
+    </div>
+  </div>
+
+  {/* Image row */}
+  <div className="w-full overflow-x-auto scroll-smooth scrollbar-hide scrollbar-hidden">
+    <div className="flex justify-center gap-8 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 pl-10 min-w-max ">
+      {[image6, image1, image2, image3, image4, image5].map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={`Image ${idx}`}
+          className="h-[160px] sm:h-[140px] md:h-[180px] lg:h-[220px] xl:h-[240px] w-auto object-contain"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }
